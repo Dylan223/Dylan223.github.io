@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Dylan Drolet · Data, Databases, Game Engineering</title>
+<meta name="description" content="Portfolio of Dylan Drolet. Backend systems, game engineering, and production infrastructure. Based in Orlando, FL.">
+<meta name="author" content="Dylan Drolet">
+<meta property="og:title" content="Dylan Drolet · Portfolio">
+<meta property="og:description" content="Where game engineering meets backend infrastructure.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0c0b0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230c0b0a'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='52' font-weight='700' text-anchor='middle' fill='%23c8ff00'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<canvas id="particles" aria-hidden="true"></canvas>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="grain"></div>
+
+<nav class="nav" id="nav">
+  <a href="#top" class="nav-brand">
+    <span class="orb3d" data-c="lime" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,3 21,8 21,16 12,21 3,16 3,8"/><polyline points="12,3 12,12 3,8"/><line x1="12" y1="12" x2="21" y2="8"/></svg></span>
+    DYLAN.DROLET
+  </a>
+  <div class="nav-links">
+    <a href="#work" class="hide-mobile"><span class="orb3d sm tumble" data-c="cyan" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,12 12,22 2,12"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span>work</a>
+    <a href="#gentoi" class="hide-mobile"><span class="orb3d sm" data-c="warm" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,3 21,8 21,16 12,21 3,16 3,8"/><polyline points="12,3 12,12 3,8"/><line x1="12" y1="12" x2="21" y2="8"/></svg></span>web</a>
+    <a href="#mods" class="hide-mobile"><span class="orb3d sm reverse" data-c="pink" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,3 22,20 2,20"/><line x1="12" y1="3" x2="12" y2="20" opacity="0.5"/></svg></span>mods</a>
+    <a href="#about" class="hide-mobile"><span class="orb3d sm tumble" data-c="violet" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,12 12,22 2,12"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span>about</a>
+    <a href="#contact"><span class="orb3d sm fast" data-c="amber" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,3 21,8 21,16 12,21 3,16 3,8"/><polyline points="12,3 12,12 3,8"/><line x1="12" y1="12" x2="21" y2="8"/></svg></span>contact</a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero container">
+  <div class="hero-portrait reveal" aria-label="Photo of Dylan">
+    <img src="dylan.jpg" alt="Dylan Drolet" loading="eager">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-meta reveal">
+      <div class="hero-meta-block">
+        <span class="label">Available</span>
+        <span class="value">Internships · Full-time · 2026</span>
+      </div>
+      <div class="hero-meta-block">
+        <span class="label">Located</span>
+        <span class="value">Orlando, Florida</span>
+      </div>
+      <div class="hero-meta-block">
+        <span class="label">Currently</span>
+        <span class="value">BS Information Technology, UCF</span>
+      </div>
+      <div class="hero-meta-block">
+        <span class="label">Index</span>
+        <span class="value">2026 · 001</span>
+      </div>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line"><span>Dylan</span></span>
+      <span class="line last"><span>Drolet.</span></span>
+    </h1>
+
+    <p class="hero-sub reveal">
+      Most of my work sits around <em>data</em> and <em>database systems</em>. I design SQL schemas, deploy MySQL on Linux VPS environments straight from the terminal, and write the runtime code that connects games and web platforms to that infrastructure. I do <em>game engineering</em> when the project calls for it. Everything I&rsquo;ve built runs live, used by real players every day.
+    </p>
+
+    <div class="hero-actions reveal">
+      <a href="#work" class="btn primary">
+        View Work
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+      <a href="#contact" class="btn">
+        Open Ticket
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+      <a href="https://github.com/Dylan223" target="_blank" rel="noopener" class="btn">
+        GitHub
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="marquee-track">
+      <span>LUA · GLUA · PYTHON · JAVA · SQL · DJANGO · LINUX VPS · MYSQL · APACHE · GIT · UNITY · UNREAL · SOURCE ENGINE · HAMMER · PRODUCTION DATABASES · MULTIPLAYER SERVERS · 80K+ PLAYERS · 300K+ SUBSCRIPTIONS · 99% UPTIME · </span>
+      <span>LUA · GLUA · PYTHON · JAVA · SQL · DJANGO · LINUX VPS · MYSQL · APACHE · GIT · UNITY · UNREAL · SOURCE ENGINE · HAMMER · PRODUCTION DATABASES · MULTIPLAYER SERVERS · 80K+ PLAYERS · 300K+ SUBSCRIPTIONS · 99% UPTIME · </span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat reveal">
+        <div class="stat-number" data-count="80000">0<span class="plus">+</span></div>
+        <div class="stat-label">Players tracked<br>in production DB</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="300000">0<span class="plus">+</span></div>
+        <div class="stat-label">Workshop<br>subscriptions</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="2000">0<span class="plus">+</span></div>
+        <div class="stat-label">Store purchases<br>on custom site</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="99">0<span class="plus">%</span></div>
+        <div class="stat-label">Uptime across<br>game servers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT  SQL -->
+<section class="featured container" id="work">
+  <div class="reveal">
+    <div class="featured-tag">◆ Featured Project · 01</div>
+    <h2 class="featured-title">A production SQL backend for a content creator's game, scaled to <em>80,000+ players</em> as the community went viral.</h2>
+  </div>
+
+  <div class="featured-grid">
+    <div class="featured-media reveal">
+      <div class="media-header">
+        <div class="media-dot r"></div>
+        <div class="media-dot y"></div>
+        <div class="media-dot g"></div>
+        <div class="media-title">MySQL Workbench · production database</div>
+      </div>
+      <img src="sqltables.jpg" alt="Production MySQL database showing 80+ tables with millions of rows" class="media-img" loading="lazy">
+    </div>
+
+    <div class="featured-video reveal">
+      <div class="video-thumb" id="videoThumb" role="button" tabindex="0" aria-label="Play YouTube showcase">
+        <img src="https://img.youtube.com/vi/slv2I4PxpeM/maxresdefault.jpg" alt="Content creator showcase" loading="lazy">
+        <div class="video-play">
+          <div class="video-play-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="video-caption">
+        <div class="video-caption-title">Content creator showcase</div>
+        <div class="video-caption-sub">YOUTUBE · LIVE GAMEPLAY ON THE INFRASTRUCTURE</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="featured-details">
+    <div class="featured-body reveal">
+      <p>Designed and shipped a full SQL backend in collaboration with a content creator's game project. As the community went viral, I scaled the database from a handful of users to <strong>80,000+ tracked players and millions of rows of gameplay data</strong>, with normalized table design, stored procedures, and data import/export pipelines built for production traffic.</p>
+      <p>Wrote custom Lua scripts that interface with the database in real time, enabling efficient retrieval and updating of player records for concurrent users across the live server. Deployed and configured a <strong>Linux VPS from scratch</strong> with MySQL, Apache, and Git installed, then locked down access with role-based MySQL permissions plus PhpMyAdmin for streamlined ops.</p>
+    </div>
+
+    <div class="tech-list reveal">
+      <div class="tech-row"><span class="k">Database</span><span class="v">MySQL 8 · 80+ tables</span></div>
+      <div class="tech-row"><span class="k">Scale</span><span class="v">80,000+ players</span></div>
+      <div class="tech-row"><span class="k">Volume</span><span class="v">Millions of rows</span></div>
+      <div class="tech-row"><span class="k">Runtime</span><span class="v">Lua / GLua scripts</span></div>
+      <div class="tech-row"><span class="k">Infra</span><span class="v">Linux VPS · Apache · Git</span></div>
+      <div class="tech-row"><span class="k">Admin</span><span class="v">PhpMyAdmin · Role-based MySQL users</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT  GENTOI.ONLINE -->
+<section class="gentoi" id="gentoi">
+  <div class="gentoi-bg" aria-hidden="true">
+    <video class="gentoi-video" id="gentoiVideo" autoplay muted loop playsinline preload="metadata" poster="server-poster.jpg">
+      <source src="loadingscreen.mp4" type="video/mp4">
+    </video>
+    <div class="gentoi-overlay"></div>
+    <div class="gentoi-scanlines"></div>
+  </div>
+
+  <div class="container gentoi-content">
+    <div class="reveal">
+      <div class="featured-tag warm">◆ Featured Project · 02</div>
+      <h2 class="featured-title">A full-stack <em>web gateway</em> for my game server. Store, bans, and account systems generating real revenue.</h2>
+    </div>
+
+    <div class="gentoi-grid">
+      <div class="gentoi-screenshot reveal">
+        <div class="media-header">
+          <div class="media-dot r"></div>
+          <div class="media-dot y"></div>
+          <div class="media-dot g"></div>
+          <div class="media-title">gentoi.online · live production</div>
+          <a class="ext-link" href="https://gentoi.online/" target="_blank" rel="noopener">
+            Visit ↗
+          </a>
+        </div>
+        <div class="gentoi-iframe-wrap">
+          <iframe class="gentoi-iframe" src="https://gentoi.online/" loading="lazy" title="gentoi.online live preview" sandbox="allow-same-origin allow-scripts" referrerpolicy="no-referrer"></iframe>
+          <div class="iframe-fallback">
+            <img src="server-poster.jpg" alt="gentoi.online preview" loading="lazy">
+            <a class="btn primary" href="https://gentoi.online/" target="_blank" rel="noopener">
+              Open Live Site
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="gentoi-stats reveal">
+        <div class="gentoi-stat-block">
+          <div class="gs-num" data-count="80699">0</div>
+          <div class="gs-lbl">Total players</div>
+        </div>
+        <div class="gentoi-stat-block">
+          <div class="gs-num" data-count="4381">0</div>
+          <div class="gs-lbl">Monthly players</div>
+        </div>
+        <div class="gentoi-stat-block">
+          <div class="gs-num" data-count="2000">0<span class="plus">+</span></div>
+          <div class="gs-lbl">Store purchases</div>
+        </div>
+        <div class="gentoi-stat-block">
+          <div class="gs-num" data-count="769">0</div>
+          <div class="gs-lbl">Registered users</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gentoi-body reveal">
+      <p>Designed and built <strong>gentoi.online</strong> from scratch as a custom-coded web gateway for my Garry's Mod community. The site handles <strong>Steam OpenID authentication</strong>, a transactional <strong>package store</strong> tied directly to in-game entitlements, a <strong>public ban registry</strong> with searchable history, and a full <strong>user database</strong> recording sign-ups, sessions, and key gameplay metrics.</p>
+      <p>The store has processed <strong>over 2,000 real purchases</strong>, and the site routinely brings in thousands of monthly visitors who funnel through Steam auth into the game server. Every transaction, ban, and player record syncs back to the production MySQL backend, making the website the connective tissue between the public-facing community and the live game.</p>
+    </div>
+
+    <div class="gentoi-features reveal">
+      <div class="gfeature">
+        <div class="gf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+        </div>
+        <h4>Steam OAuth</h4>
+        <p>Steam OpenID sign-in flow tying website accounts to live game identities.</p>
+      </div>
+      <div class="gfeature">
+        <div class="gf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2h12l3 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9zM3 9h18M8 13h8"/></svg>
+        </div>
+        <h4>Package Store</h4>
+        <p>Transactional checkout for in-game packages, with 2,000+ completed orders.</p>
+      </div>
+      <div class="gfeature">
+        <div class="gf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M5 5l14 14"/></svg>
+        </div>
+        <h4>Ban Registry</h4>
+        <p>Public, searchable ban history synced from server-side enforcement.</p>
+      </div>
+      <div class="gfeature">
+        <div class="gf-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </div>
+        <h4>Player Database</h4>
+        <p>Account signups, session logs, and gameplay stat aggregation in real time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP MODS -->
+<section class="container" id="mods">
+  <div class="mods-header">
+    <div class="mods-header-meta reveal">
+      <div class="section-label">Garry's Mod · Workshop</div>
+      <h2 class="section-title">Game content reaching <em>hundreds of thousands</em> of players.</h2>
+      <p class="section-sub">Original NPCs and Nextbots built on Source Engine. Custom AI behaviour, possession controls, model importing, animation work, and effects coded in Lua/GLua. Live on the Steam Workshop with active community engagement.</p>
+    </div>
+    <div class="mods-tally reveal">
+      <div class="num">300K<span style="font-style:normal; font-family:var(--sans); font-size:0.5em; vertical-align:super;">+</span></div>
+      <div class="lbl">Total subscriptions</div>
+    </div>
+  </div>
+
+  <div class="mods-grid">
+    <article class="mod reveal" data-tilt>
+      <div class="mod-img"><img src="https://images.steamusercontent.com/ugc/16798293482887040747/8F17D995804B048FD7F49E2BB6130DC96A0C3258/?imw=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Golden Frieza" loading="lazy"></div>
+      <div class="mod-body">
+        <div class="mod-tags"><span class="mod-tag">NPC</span><span class="mod-tag">DrGBase</span><span class="mod-tag">Lua</span></div>
+        <h3 class="mod-title">Golden Frieza</h3>
+        <p class="mod-desc">A high-poly NPC import from DBZ Sparkling Zero. ~10 custom attacks, full possession support, custom effects, and AI targeting other NPCs / Nextbots / players.</p>
+        <div class="mod-foot">
+          <a class="mod-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3562226267" target="_blank" rel="noopener">
+            View on Steam
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </a>
+          <span class="mod-rating">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="mod reveal" data-tilt>
+      <div class="mod-img"><img src="https://images.steamusercontent.com/ugc/17730378827013826533/0730BAF36475980F576E06FC04F8A4994A61F3C9/?imw=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Pumpkin Rabbit" loading="lazy"></div>
+      <div class="mod-body">
+        <div class="mod-tags"><span class="mod-tag">Pill Pack</span><span class="mod-tag">Nextbot</span><span class="mod-tag">Horror</span></div>
+        <h3 class="mod-title">Pumpkin Rabbit</h3>
+        <p class="mod-desc">Original Nextbot character with custom behaviour and AI. Part of the wider Pill Pack series. Modular, lightweight, and tuned for performance under heavy server load.</p>
+        <div class="mod-foot">
+          <a class="mod-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3532749231" target="_blank" rel="noopener">
+            View on Steam
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </a>
+          <span class="mod-rating">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="mod reveal" data-tilt>
+      <div class="mod-img"><img src="https://images.steamusercontent.com/ugc/9564451226027353571/76F2643AEABF53BA6FF136B4D9A18A5F78FF2739/?imw=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Kolossos" loading="lazy"></div>
+      <div class="mod-body">
+        <div class="mod-tags"><span class="mod-tag">Pill Pack</span><span class="mod-tag">Boss</span><span class="mod-tag">Custom AI</span></div>
+        <h3 class="mod-title">Kolossos</h3>
+        <p class="mod-desc">Boss-tier Nextbot with custom encounter design. Multi-stage behaviour, scripted attacks, and aggressive AI tuned to feel threatening across map types.</p>
+        <div class="mod-foot">
+          <a class="mod-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3703631332" target="_blank" rel="noopener">
+            View on Steam
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </a>
+          <span class="mod-rating">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="mod reveal" data-tilt>
+      <div class="mod-img"><img src="https://images.steamusercontent.com/ugc/2465248424999312635/F746EB59CA5F6D4984B64AA236122698F6680AC1/?imw=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Sonic.EYX" loading="lazy"></div>
+      <div class="mod-body">
+        <div class="mod-tags"><span class="mod-tag">Pill Pack</span><span class="mod-tag">Creepypasta</span><span class="mod-tag">Effects</span></div>
+        <h3 class="mod-title">Sonic.EYX</h3>
+        <p class="mod-desc">Horror-themed Nextbot inspired by the Sonic.EYX creepypasta. Custom visual effects, sound design, and scripted scares, all tuned for atmospheric gameplay.</p>
+        <div class="mod-foot">
+          <a class="mod-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3343138595" target="_blank" rel="noopener">
+            View on Steam
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </a>
+          <span class="mod-rating">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="mod reveal" data-tilt>
+      <div class="mod-img"><img src="https://images.steamusercontent.com/ugc/14721126180154074982/5D26C677851D9DF2A7B3499E5203CE4C673DF28E/?imw=512&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Nosey" loading="lazy"></div>
+      <div class="mod-body">
+        <div class="mod-tags"><span class="mod-tag">Pill Pack</span><span class="mod-tag">Original</span><span class="mod-tag">Nextbot</span></div>
+        <h3 class="mod-title">Nosey</h3>
+        <p class="mod-desc">Original character Nextbot with bespoke AI and animation work. Designed to integrate cleanly into existing community servers without performance penalties.</p>
+        <div class="mod-foot">
+          <a class="mod-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3574746535" target="_blank" rel="noopener">
+            View on Steam
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </a>
+          <span class="mod-rating">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="mod reveal mod-more">
+      <div class="mod-body more-body">
+        <h3 class="mod-title">+ more</h3>
+        <p class="mod-desc">A full library of additional Workshop content, prefabs, and supporting addons.</p>
+        <a class="mod-link" href="https://steamcommunity.com/profiles/76561198057801491/myworkshopfiles/?appid=4000" target="_blank" rel="noopener">
+          See full workshop
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="container" id="about">
+  <div class="section-head reveal">
+    <div class="section-label">The Stack</div>
+    <h2 class="section-title">Built across <em>languages</em>, <em>engines</em>, and <em>infrastructure</em>.</h2>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-block reveal">
+      <div class="skill-num">/ 01</div>
+      <div class="skill-title">Languages</div>
+      <div class="skill-tags">
+        <span class="skill-pill">Lua</span><span class="skill-pill">GLua</span><span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">Java</span><span class="skill-pill">HTML</span><span class="skill-pill">CSS</span><span class="skill-pill">JSON</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-num">/ 02</div>
+      <div class="skill-title">Tools &amp; Platforms</div>
+      <div class="skill-tags">
+        <span class="skill-pill">MySQL</span><span class="skill-pill">PhpMyAdmin</span><span class="skill-pill">Apache</span><span class="skill-pill">Django</span><span class="skill-pill">Git</span><span class="skill-pill">FileZilla</span><span class="skill-pill">PuTTY</span><span class="skill-pill">Source Engine</span><span class="skill-pill">Hammer</span><span class="skill-pill">Unity</span><span class="skill-pill">Unreal 4/5</span>
+      </div>
+    </div>
+
+    <div class="skill-block reveal">
+      <div class="skill-num">/ 03</div>
+      <div class="skill-title">Systems &amp; Infrastructure</div>
+      <div class="skill-tags">
+        <span class="skill-pill">Linux VPS</span><span class="skill-pill">Windows Server</span><span class="skill-pill">VirtualBox</span><span class="skill-pill">REST APIs</span><span class="skill-pill">BIOS / UEFI</span><span class="skill-pill">Hardware Builds</span><span class="skill-pill">ML Workloads</span><span class="skill-pill">Network Admin</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER PROJECTS -->
+<section class="container">
+  <div class="section-head reveal">
+    <div class="section-label">Other Work</div>
+    <h2 class="section-title">Servers, hardware, and <em>machine learning</em>.</h2>
+  </div>
+
+  <div class="projects-row">
+    <article class="mini-project reveal">
+      <h4>Game Server Administration</h4>
+      <p>Setup, configuration, and ongoing maintenance of multiplayer game servers with 99%+ uptime serving thousands of active players. Performance tuning, structured troubleshooting, version-controlled configs, and a local VirtualBox network of Windows Server VMs for testing.</p>
+      <div class="mini-stack"><span>Linux</span><span>Windows Server</span><span>VirtualBox</span><span>Source Engine</span></div>
+    </article>
+
+    <article class="mini-project reveal">
+      <h4>Simple Train, ML Hardware &amp; Backend</h4>
+      <p>Assembled a dedicated server PC optimized for ML training workloads end-to-end. Hardware selection, environment setup, and the Django backend with REST APIs handling data processing and model interaction between front end and ML pipeline.</p>
+      <div class="mini-stack"><span>Django</span><span>Python</span><span>REST</span><span>Custom Build</span></div>
+    </article>
+
+    <article class="mini-project reveal">
+      <h4>Custom PC Builds</h4>
+      <p>Hands-on system architecture covering CPUs, GPUs, motherboards, cooling, BIOS/UEFI, and driver management. Diagnosed thermal throttling, boot failures, and component incompatibilities using structured methodology. Advised on cost-effective builds for gaming, dev, and hosting.</p>
+      <div class="mini-stack"><span>Hardware</span><span>Architecture</span><span>Troubleshooting</span></div>
+    </article>
+
+    <article class="mini-project reveal">
+      <h4>UCF Information Technology</h4>
+      <p>Pursuing a BS in Information Technology at the University of Central Florida, with expected graduation Fall 2026. Focus on systems, networking, databases, and applied software development.</p>
+      <div class="mini-stack"><span>BS · IT</span><span>UCF</span><span>Fall 2026</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="container">
+  <div class="section-head reveal">
+    <div class="section-label">Experience</div>
+    <h2 class="section-title">Shipping <em>real work</em> since 2017.</h2>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-meta">
+        <span class="when">2017 → Present</span>
+        <span>Independent</span>
+      </div>
+      <div class="tl-content">
+        <h3 class="tl-role">Game &amp; Program Freelancer</h3>
+        <div class="tl-where">Everyday AS · Long-term freelance</div>
+        <p class="tl-desc">Eight years of continuous client work building games, mods, server tooling, and database infrastructure. Multiple projects shipped to active communities, including the production SQL backend tracking 80,000+ players, the gentoi.online web gateway, and Workshop content with hundreds of thousands of subscriptions.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-meta">
+        <span class="when">Jun 2023 → Aug 2023</span>
+        <span>OS Rep</span>
+      </div>
+      <div class="tl-content">
+        <h3 class="tl-role">Operating Systems Support</h3>
+        <div class="tl-where">Onesupport</div>
+        <p class="tl-desc">Front-line OS support, diagnosing user issues, walking customers through resolutions, and documenting recurring problems for the wider team.</p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-meta">
+        <span class="when">Jan 2018 → Jul 2019</span>
+        <span>Host</span>
+      </div>
+      <div class="tl-content">
+        <h3 class="tl-role">Host</h3>
+        <div class="tl-where">Red Lobster</div>
+        <p class="tl-desc">Customer-facing role early on. High-volume coordination, working under pressure, and learning how to keep a complex system (a busy restaurant) running smoothly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT  TICKET SYSTEM -->
+<section class="contact container" id="contact">
+  <div class="section-head reveal">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Open a <em>ticket</em>.</h2>
+    <p class="section-sub">For collaboration, work inquiries, or anything else, submit a ticket below and I'll respond within 24 hours.</p>
+  </div>
+
+  <div class="ticket-system reveal">
+    <div class="ticket-header">
+      <div class="ticket-header-left">
+        <span class="ticket-id">TICKET <span class="num" id="ticketId">#DR-2026-A4F2</span></span>
+        <span class="ticket-status">
+          <span class="orb3d sm" id="statusDot" data-c="amber" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,3 21,8 21,16 12,21 3,16 3,8"/><polyline points="12,3 12,12 3,8"/><line x1="12" y1="12" x2="21" y2="8"/></svg></span>
+          <span id="ticketStatus">Pending Submission</span>
+        </span>
+      </div>
+      <div class="ticket-header-right">
+        <span>CREATED · <span id="ticketTime">--:--:--</span></span>
+      </div>
+    </div>
+
+    <div class="ticket-body" id="ticketBody">
+      <form class="ticket-form" id="ticketForm" novalidate>
+        <div class="form-row two">
+          <div class="form-field">
+            <label>Name <span class="required">REQ</span></label>
+            <input type="text" name="name" required placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label>Email <span class="required">REQ</span></label>
+            <input type="email" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-row two">
+          <div class="form-field">
+            <label>Ticket Type</label>
+            <select name="type">
+              <option>Inquiry</option>
+              <option>Collaboration</option>
+              <option>Job Opportunity</option>
+              <option>Project Discussion</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Subject <span class="required">REQ</span></label>
+            <input type="text" name="subject" required placeholder="Brief description" maxlength="120">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label>Message <span class="required">REQ</span></label>
+          <textarea name="message" rows="6" required placeholder="What's this about? Include any relevant context, links, or timelines." maxlength="2000" id="msgField"></textarea>
+          <span class="char-count" id="charCount">0 / 2000</span>
+        </div>
+
+        <!-- Honeypot anti-spam (hidden) -->
+        <input type="text" name="_honey" style="display:none;" tabindex="-1" autocomplete="off">
+
+        <div class="ticket-error" id="ticketError"></div>
+
+        <div class="form-footer">
+          <div class="ticket-meta">
+            <span>Priority: Normal</span>
+            <span>Response: 24h</span>
+            <span>Encrypted</span>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn" id="mailtoFallback">Email Directly</button>
+            <button type="submit" class="btn primary" id="submitBtn">
+              Submit Ticket
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="ticket-success" id="ticketSuccess" hidden>
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Ticket Filed.</h3>
+        <p>Your ticket <strong id="successId">#DR-2026-A4F2</strong> has been received. I'll get back to you at the email you provided within 24 hours.</p>
+        <div class="success-actions">
+          <button type="button" class="btn" id="newTicket">Open Another Ticket</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-quick">
+    <a class="cquick reveal" href="mailto:dyland82@hotmail.com">
+      <div class="cquick-meta">
+        <span class="cquick-lbl">/ Email</span>
+        <span class="cquick-val">dyland82@hotmail.com</span>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+    </a>
+    <a class="cquick reveal" href="tel:+15702360216">
+      <div class="cquick-meta">
+        <span class="cquick-lbl">/ Phone</span>
+        <span class="cquick-val">+1 (570) 236-0216</span>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+    </a>
+    <a class="cquick reveal" href="https://github.com/Dylan223" target="_blank" rel="noopener">
+      <div class="cquick-meta">
+        <span class="cquick-lbl">/ GitHub</span>
+        <span class="cquick-val">@Dylan223</span>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Dylan Drolet · Orlando, FL</span>
+      <span class="status">
+        <span class="orb3d sm" data-c="green" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12,2 22,12 12,22 2,12"/><line x1="2" y1="12" x2="22" y2="12"/></svg></span>
+        Coded by Dylan John Drolet · 2026
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
