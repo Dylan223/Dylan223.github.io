@@ -232,7 +232,7 @@ section {
   font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(3.5rem, 12vw, 11rem);
-  line-height: 0.92;
+  line-height: 0.98;
   letter-spacing: -0.04em;
   margin: 0;
   position: relative;
