@@ -208,7 +208,7 @@ section {
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: 32px;
   width: 100%;
   position: relative;
 }
@@ -232,13 +232,13 @@ section {
   font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(3.5rem, 12vw, 11rem);
-  line-height: 0.98;
+  line-height: 0.92;
   letter-spacing: -0.04em;
   margin: 0;
   position: relative;
 }
 
-.hero-title .line { display: block; overflow: hidden; }
+.hero-title .line { display: block; overflow: hidden; padding-bottom: 0.14em; }
 .hero-title .line > span {
   display: inline-block;
   transform: translateY(110%);
@@ -265,7 +265,7 @@ section {
   line-height: 1.65;
   color: var(--text-dim);
   max-width: 720px;
-  margin-top: 12px;
+  margin-top: 4px;
 }
 
 .hero-sub strong { color: var(--text); font-weight: 500; }
@@ -274,7 +274,7 @@ section {
 .hero-actions {
   display: flex;
   gap: 14px;
-  margin-top: 16px;
+  margin-top: 4px;
   flex-wrap: wrap;
 }
 
