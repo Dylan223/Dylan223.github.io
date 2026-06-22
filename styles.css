@@ -607,6 +607,145 @@ section {
 .tech-row .v { color: var(--text); }
 
 /* ========================================================
+   ANALYTICS FLAGSHIP (#work)
+   ======================================================== */
+.analytics-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.ametric {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 7px 13px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.ametric b { color: var(--accent); font-weight: 600; }
+
+.analytics-cta {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.3s var(--ease), transform 0.4s var(--ease);
+}
+.analytics-cta:hover { border-color: var(--accent); transform: translateY(-2px); }
+.cta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.live-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 var(--accent-glow);
+  animation: livePulse 2s ease-out infinite;
+}
+@keyframes livePulse {
+  0% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  100% { box-shadow: 0 0 0 9px rgba(200,255,0,0); }
+}
+.analytics-cta h3 {
+  font-family: var(--serif);
+  font-size: 1.9rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.analytics-cta > p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+.cta-rows { display: flex; flex-direction: column; gap: 0; margin-top: 2px; }
+.cta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.cta-row:last-child { border-bottom: none; }
+.cta-row .k { color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.08em; }
+.cta-row .v { color: var(--text); }
+.cta-btn { margin-top: 6px; justify-content: center; }
+
+.analytics-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+@media (max-width: 760px) { .analytics-gallery { grid-template-columns: 1fr; } }
+.analytics-gallery figure { margin: 0; }
+.analytics-gallery figcaption {
+  padding: 14px 18px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 64px;
+}
+@media (max-width: 960px) { .cap-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .cap-grid { grid-template-columns: 1fr; } }
+.cap {
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+.cap:hover { border-color: var(--accent); transform: translateY(-3px); background: var(--bg-elevated); }
+.cap-icon {
+  width: 34px; height: 34px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.cap-icon svg { width: 100%; height: 100%; }
+.cap-kicker {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+}
+.cap h4 { font-family: var(--sans); font-weight: 600; font-size: 1.05rem; }
+.cap p { font-size: 0.9rem; line-height: 1.55; color: var(--text-dim); }
+.cap p i { font-style: italic; color: var(--text); }
+.featured-body code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: 3px;
+  padding: 1px 5px;
+  color: var(--accent);
+}
+
+/* ========================================================
    GENTOI.ONLINE SECTION
    ======================================================== */
 .gentoi {
