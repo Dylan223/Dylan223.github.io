@@ -151,7 +151,7 @@
         <div class="media-title">gentoi.online/analytics · live dashboard</div>
         <a class="ext-link" href="https://gentoi.online/analytics" target="_blank" rel="noopener">Open ↗</a>
       </div>
-      <img src="view2.jpg" alt="Server analytics dashboard showing player activity and economy metrics: 43,980 players tracked, 694.4M points in circulation, Gini coefficient 0.967" class="media-img" loading="lazy">
+      <img data-lightbox src="view2.jpg" alt="Server analytics dashboard showing player activity and economy metrics: 43,980 players tracked, 694.4M points in circulation, Gini coefficient 0.967" class="media-img" loading="lazy"><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span>
     </div>
 
     <div class="analytics-cta reveal">
@@ -178,7 +178,7 @@
         <div class="media-dot g"></div>
         <div class="media-title">K-means segmentation · 5 archetypes + PCA projection</div>
       </div>
-      <img src="view1.jpg" alt="Player segments view: K-means clustering into Lapsed regulars, Newcomers, Casuals, Grinders and Veterans, with a 2D PCA scatter showing how the clusters separate" class="media-img" loading="lazy">
+      <img data-lightbox src="view1.jpg" alt="Player segments view: K-means clustering into Lapsed regulars, Newcomers, Casuals, Grinders and Veterans, with a 2D PCA scatter showing how the clusters separate" class="media-img" loading="lazy"><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span>
       <figcaption>Unsupervised clustering groups players into five behavioural archetypes, projected to 2D with PCA so the separation is visible.</figcaption>
     </figure>
 
@@ -189,7 +189,7 @@
         <div class="media-dot g"></div>
         <div class="media-title">Linear regression · what predicts player wealth</div>
       </div>
-      <img src="view3.jpg" alt="Regression view: standardized coefficient bar chart showing playtime as the dominant driver of wealth, plus a predicted-vs-actual scatter on a held-out test set" class="media-img show-lower" loading="lazy">
+      <img data-lightbox src="view3.jpg" alt="Regression view: standardized coefficient bar chart showing playtime as the dominant driver of wealth, plus a predicted-vs-actual scatter on a held-out test set" class="media-img show-lower" loading="lazy"><span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>Expand</span>
       <figcaption>A regression model ranks which engagement features drive wealth, with a predicted-vs-actual plot on held-out data (R&sup2; 0.448).</figcaption>
     </figure>
   </div>
@@ -751,6 +751,41 @@
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded image">
+  <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-hint">Click outside the image or press Esc to close</div>
+</div>
+
 <script src="script.js"></script>
+<script>
+(function () {
+  var lb = document.getElementById('lightbox');
+  if (!lb) return;
+  var lbImg = lb.querySelector('.lightbox-img');
+  var lbClose = lb.querySelector('.lightbox-close');
+
+  function open(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(function () { if (!lb.classList.contains('open')) lbImg.src = ''; }, 260);
+  }
+
+  document.querySelectorAll('[data-lightbox]').forEach(function (el) {
+    el.addEventListener('click', function () { open(el.getAttribute('src'), el.getAttribute('alt')); });
+  });
+  lbClose.addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('open')) close(); });
+})();
+</script>
 </body>
 </html>
