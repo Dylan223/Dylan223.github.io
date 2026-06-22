@@ -1,10 +1,3 @@
-/* ========================================================
-   Dylan Drolet · Portfolio Scripts
-   ======================================================== */
-
-/* ============================================================
-   PARTICLE FIELD — drifting stars + occasional meteor streaks
-   ============================================================ */
 class ParticleField {
   constructor(canvas) {
     this.canvas = canvas;
@@ -44,7 +37,7 @@ class ParticleField {
       this.stars.push({
         x: Math.random() * this.w,
         y: Math.random() * this.h,
-        r: Math.random() * 1.3 + 0.25,
+        r: Math.random() * 1.2 + 0.25,
         vx: (Math.random() - 0.5) * 0.04,
         vy: (Math.random() - 0.5) * 0.04,
         twinkle: Math.random() * Math.PI * 2,
