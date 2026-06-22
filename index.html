@@ -130,7 +130,7 @@
 <section class="featured container" id="work">
   <div class="reveal">
     <div class="featured-tag">◆ Featured Project · 01</div>
-    <h2 class="featured-title">A <em>machine-learning</em> analytics platform that segments 44,000 players and predicts in-game wealth &mdash; narrated by an <em>LLM</em>.</h2>
+    <h2 class="featured-title">A <em>machine-learning</em> analytics platform that segments 44,000 players and predicts in-game wealth, with an <em>LLM</em> that writes the insights.</h2>
   </div>
 
   <div class="analytics-metrics reveal">
@@ -189,16 +189,16 @@
         <div class="media-dot g"></div>
         <div class="media-title">Linear regression · what predicts player wealth</div>
       </div>
-      <img src="view3.jpg" alt="Regression view: standardized coefficient bar chart showing playtime as the dominant driver of wealth, plus a predicted-vs-actual scatter on a held-out test set" class="media-img" loading="lazy">
+      <img src="view3.jpg" alt="Regression view: standardized coefficient bar chart showing playtime as the dominant driver of wealth, plus a predicted-vs-actual scatter on a held-out test set" class="media-img show-lower" loading="lazy">
       <figcaption>A regression model ranks which engagement features drive wealth, with a predicted-vs-actual plot on held-out data (R&sup2; 0.448).</figcaption>
     </figure>
   </div>
 
   <div class="featured-details">
     <div class="featured-body reveal">
-      <p>An end-to-end analytics platform I built in <strong>Python</strong> for my Garry's Mod community. It reads from <strong>three MySQL schemas spread across two physical servers</strong>, resolves players across mismatched Steam ID formats (legacy <code>STEAM_0</code> vs. 64-bit) into a single identity, and engineers a clean feature set &mdash; playtime, account age, skill level, season rank, daily intensity &mdash; for <strong>43,980 players</strong>.</p>
+      <p>An end-to-end analytics platform I built in <strong>Python</strong> for my Garry's Mod community. It reads from <strong>three MySQL schemas spread across two physical servers</strong>, resolves players across mismatched Steam ID formats (legacy <code>STEAM_0</code> vs. 64-bit) into a single identity, and engineers a clean feature set for <strong>43,980 players</strong>: playtime, account age, skill level, season rank, and daily intensity.</p>
       <p>Two <strong>scikit-learn</strong> models sit on top of that data. A <strong>K-means clustering</strong> model groups players into five behavioural archetypes, validated with a silhouette score and projected to 2D with PCA. A <strong>linear regression</strong> predicts in-game wealth from engagement features, explaining roughly 45% of the variance (R&sup2; 0.448) with standardized coefficients, and I flag the multicollinearity so results are reported as <strong>correlation, not cause</strong>.</p>
-      <p>An <strong>LLM layer (Anthropic's Claude API)</strong> turns the numbers into plain-English insight. It's a deliberate <strong>precompute-and-narrate</strong> design: every statistic is calculated in Python first, and the model only narrates verified figures &mdash; so it <strong>can't invent numbers</strong>. The same layer powers per-player season recaps and a rate-limited chat assistant. The whole pipeline caches its output to the database and runs <strong>live in production</strong>.</p>
+      <p>An <strong>LLM layer (Anthropic's Claude API)</strong> turns the numbers into plain-English insight. It's a deliberate <strong>precompute-and-narrate</strong> design: every statistic is calculated in Python first, and the model only narrates verified figures, so it <strong>can't invent numbers</strong>. The same layer powers per-player season recaps and a rate-limited chat assistant. The whole pipeline caches its output to the database and runs <strong>live in production</strong>.</p>
     </div>
 
     <div class="tech-list reveal">
@@ -227,7 +227,7 @@
       </div>
       <div class="cap-kicker">Predictive ML</div>
       <h4>Wealth regression</h4>
-      <p>Predicts player wealth from engagement. R&sup2; 0.448 on a held-out test split, standardized coefficients for direct comparison, and multicollinearity flagged &mdash; reported as correlation, not cause.</p>
+      <p>Predicts player wealth from engagement. R&sup2; 0.448 on a held-out test split, standardized coefficients for direct comparison, and multicollinearity flagged, so results are correlation, not cause.</p>
     </div>
 
     <div class="cap reveal">
@@ -236,7 +236,7 @@
       </div>
       <div class="cap-kicker">LLM integration</div>
       <h4>Precompute &amp; narrate</h4>
-      <p>Claude API turns verified numbers into readable insight. Python computes every figure first; the model only writes the words &mdash; so it can't hallucinate stats. Powers economy reports, recaps &amp; a rate-limited assistant.</p>
+      <p>Claude API turns verified numbers into readable insight. Python computes every figure first; the model only writes the words, so it can't hallucinate stats. Powers economy reports, recaps &amp; a rate-limited assistant.</p>
     </div>
 
     <div class="cap reveal">
